@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@1100&family=Pacifico&family=Shadows+Into+Light&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Muli',sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     background: linear-gradient(232deg, #0044ff, #ff00d4);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 0s ease infinite;
+    -moz-animation: AnimationName 0s ease infinite;
+    animation: AnimationName 0s ease infinite;
+}
+.container{
+    display: flex;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    -webkit-box-shadow: 0 0 5px 2px #fff;
+    -moz-box-shadow: 0 0 5px 2px #fff;
+    box-shadow: 0 0 500px 10px #ffffff;
+    border-radius: 20px;
+    padding: 10px 30px;
+}
+.panel{
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    flex:1;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 5px 2px #fff;
+    -moz-box-shadow: 0 0 5px 2px #fff;
+    box-shadow: 0 0 10px 2px #423f3f;
+    padding: 10px;
+}
+h3{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    opacity: 0;
+    margin: 0;
+    background: #F400FC;
+    background: linear-gradient(to right, #F400FC 0%, #0F07F7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Dancing Script', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Shadows Into Light', cursive;
+}
+.panel.active{
+    flex: 5;
+}
+.panel.active h3{
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+@media (max-width:480px) {
+    .container{
+        width: 100vh;
+    }
+    .panel:nth-of-type(4), .panel:nth-of-type(5){
+        display: none;
+    }
+}
+h1{
+    font-family: 'Dancing Script', cursive;
+
+}
